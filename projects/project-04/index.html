@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app"></div>
+
+    <script>
+        let numbers = [3, 4, -1, 1]
+
+        numbers.sort()
+
+        let positiveNumbers = numbers.filter(n => n > 0)
+        
+        let firstMissingPositiveNumber = 
+          positiveNumbers.filter((cn, ci) => cn + 1 !== positiveNumbers[ci + 1])[0] + 1
+
+        document.querySelector("#app").innerHTML = firstMissingPositiveNumber
+
+    </script>
+</body>
+</html>
