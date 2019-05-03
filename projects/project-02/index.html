@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Problem #2</h1>
+    <h2>Difficulty: Hard</h2>
+
+    <blockquote>
+        Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.
+        <br><br>
+        For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120, 60, 40, 30, 24]. If our input was [3, 2, 1], the expected output would be [2, 3, 6].
+        <br><br> 
+        <strong>Follow-up: what if you can't use division?</strong>
+    </blockquote>
+
+    <hr>
+
+    <pre style="background-color: dodgerblue; font-weight:bold; color:yellow">
+        <code>
+        let numbers = [1, 2, 3, 4, 5]
+        let removeIndex = []
+        let answers = []
+
+        numbers.map((nm, i) => {
+            removeIndex.push(numbers.filter((n, i) => {
+                return (nm !== n)
+            }))
+        })
+
+        // Option 1:
+        for(let x of removeIndex)
+        {
+            let temp = 1;
+
+            for(let y of x)
+            {
+                temp *= y
+            }
+
+            answers.push(temp)
+        }
+
+        // Option 2:
+        answers.push(removeIndex.map(x => {
+            let t = 1;
+            x.map(y => t *= y)
+            return t
+        }))
+        </code>
+    </pre>
+
+    <div id="app"></div>
+
+    <hr>
+
+    Outcome: Not hard at all, using map, filter and push. Wonder if I can make this within a single function....
+
+    <script>
+        let numbers = [3, 2, 1]
+        let removeIndex = []
+        let answers = []
+        numbers.map(nm => {
+            removeIndex.push(numbers.filter(n => {
+                return (nm !== n)
+            }))
+        })
+        answers.push(removeIndex.map(x => {
+            let t = 1;
+            x.map(y => t *= y)
+            return t
+        }))
+        document.querySelector("#app").innerHTML = answers
+    </script>
+</body>
+</html>

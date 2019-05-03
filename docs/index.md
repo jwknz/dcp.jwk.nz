@@ -1,17 +1,6 @@
-# Welcome to MkDocs
+Daily Coding Problems
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+Everyday I get an email send to me with a coding problem.  
+This site serves as my record of solving them.
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Each project (in the left column) describes the problem and links to my solution.
