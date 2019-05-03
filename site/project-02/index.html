@@ -110,6 +110,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#problem_1_-_received_on_03042019" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -131,7 +135,7 @@
               dcp.jwk.nz
             </span>
             <span class="md-header-nav__topic">
-              Home
+              Problem 1 - Received on 03/04/2019
             </span>
           
         </div>
@@ -638,6 +642,37 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem_asked_by_uber" title="Problem asked by Uber." class="md-nav__link">
+    Problem asked by Uber.
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -646,12 +681,36 @@
                   <a href="https://github.com/jwknz/dcp.jwk.nz/edit/master/docs/project-02/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Home</h1>
-                
-                <p>This problem was asked by Uber.</p>
+                <h1 id="problem_1_-_received_on_03042019">Problem 1 - Received on 03/04/2019<a class="headerlink" href="#problem_1_-_received_on_03042019" title="Permanent link">&para;</a></h1>
+<h2 id="problem_asked_by_uber">Problem asked by Uber.<a class="headerlink" href="#problem_asked_by_uber" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Question</p>
 <p>Given an array of integers, return a new array such that each element at index i of the new array is the product of all the numbers in the original array except the one at i.</p>
 <p>For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120, 60, 40, 30, 24]. If our input was [3, 2, 1], the expected output would be [2, 3, 6].</p>
 <p>Follow-up: what if you can't use division?</p>
+</div>
+<details class="hint"><summary>Answer</summary><div class="codehilite"><pre><span></span>let numbers = [3, 2, 1]
+let removeIndex = []
+let answers = []
+numbers.map(nm =&gt; {
+    removeIndex.push(numbers.filter(n =&gt; {
+        return (nm !== n)
+    }))
+})
+answers.push(removeIndex.map(x =&gt; {
+    let t = 1;
+    x.map(y =&gt; t *= y)
+    return t
+}))
+document.querySelector(&quot;#app&quot;).innerHTML = answers
+</pre></div>
+
+</details>
+<div class="admonition note">
+<p class="admonition-title">View result</p>
+<p><iframe style="width: 100%; height: 200px; border: none" src="https://dcp-project-jwknz.netlify.com/project-02/"></iframe></p>
+</div>
+<p><a class="btn btn-primary text-white" href="https://github.com/jwknz/dcp.jwk.nz/blob/master/projects/project-02/index.html" target="_blank">View Answer on Github</a></p>
                 
                   
                 

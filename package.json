@@ -1,0 +1,30 @@
+{
+  "name": "dcp_jwknz",
+  "version": "1.0.1",
+  "description": "Daily Coding Problems and Puzzles",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "mkdocs serve",
+    "deploy": "mkdocs build && npm version patch --no-git-tag-version && git add -A && git commit -m 'Updated Site' && git push origin master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwknz/dcp.jwk.nz.git"
+  },
+  "keywords": [
+    "dcp",
+    "jwknz",
+    "daily",
+    "coding",
+    "problems"
+  ],
+  "author": "Jeff Kranenburg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwknz/dcp.jwk.nz/issues"
+  },
+  "homepage": "https://github.com/jwknz/dcp.jwk.nz#readme"
+}
