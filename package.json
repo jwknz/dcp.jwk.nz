@@ -1,6 +1,6 @@
 {
   "name": "dcp_jwknz",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Daily Coding Problems and Puzzles",
   "main": "index.js",
   "directories": {
