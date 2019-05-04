@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app"></div>
+
+    <script>
+      
+      let givenNumbers = [2, 4, 6, 2, 5]
+      //let givenNumbers = [5, 1, 1, 5]
+
+      let getNonAdjacentTotal = (gn) => {
+
+        // Create a center number if there isn't one
+        (gn.length % 2 !== 0) ? gn[((gn.length + 1) / 2) - 1] : gn[gn.splice(gn.length / 2,0,0)]
+
+        //Get center number
+        let centerNumber = gn[Math.floor(gn.length  / 2)]
+
+        //Add all the numbers at an even index - arrays start at 0 index
+        let total = null
+        gn.map((n, i) => (i % 2 === 0) ? total += n : null) 
+        
+        return total
+      }
+
+      document.querySelector("#app").innerHTML = getNonAdjacentTotal(givenNumbers)
+
+    </script>
+</body>
+</html>
