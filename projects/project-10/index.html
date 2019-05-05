@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app"></div>
+
+    <script>
+
+      let showAlert = () => {
+        alert(`Job Function!` )
+      }
+
+      let JobScheduler = (f, n) => {
+        setTimeout(f, n); // called after a certain time
+        //setInterval(f, n) // repeat every time n milliseconds passes
+      }
+
+      JobScheduler(showAlert, 3000)
+
+    </script>
+</body>
+</html>
