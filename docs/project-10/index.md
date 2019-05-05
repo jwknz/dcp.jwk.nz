@@ -12,7 +12,7 @@
 
     ```
       let showAlert = () => {
-        alert(`Job Function!` )
+        document.querySelector('#app').innerHTML = `Job Function!` 
       }
 
       let JobScheduler = (f, n) => {

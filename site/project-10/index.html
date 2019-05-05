@@ -726,7 +726,7 @@
 <p>Implement a job scheduler which takes in a function f and an integer n, and calls f after n milliseconds.</p>
 </div>
 <details class="hint"><summary>Answer</summary><div class="codehilite"><pre><span></span>  let showAlert = () =&gt; {
-    alert(`Job Function!` )
+    document.querySelector(&#39;#app&#39;).innerHTML = `Job Function!` 
   }
 
   let JobScheduler = (f, n) =&gt; {
